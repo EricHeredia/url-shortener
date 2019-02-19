@@ -24,18 +24,17 @@
         </p>
         <form action="api/shorturl/new" method="POST">
           <label for="url_input">URL to be shortened</label>
-          <input id="url_input" type="text" name="url" value="https://www.google.com">
+          <input id="url_input" type="text" name="url" placeholder="https://www.google.com" value="https://www.google.com">
           <input type="submit" value="Submit">
         </form>
-        <form action="api/shorturl/new" method="POST">
-          <label for="url_input">Short url for redirect</label>
-          <input id="url_input" type="text" name="url" value="https://www.google.com">
+        <p>
+          Add ONLY the short URL below or manually <code>[project_url]/api/shorturl/(short URL here)</code>
+        </p>
+        <form action="api/shorturl/goto" method="POST">
+          <label for="url_input">Short URL to redirect</label>
+          <input id="url_input" type="text" name="shorturl" placeholder="Short URL here">
           <input type="submit" value="Submit">
         </form>
-        <h3>Example Usage:</h3>
-        <a href="https://thread-paper.hyperdev.space/api/shorturl/3">
-          [this_project_url]/api/shorturl/3
-        </a>
 
       </div>
       <div class="footer">

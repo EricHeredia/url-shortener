@@ -64,6 +64,17 @@ app.post('/api/shorturl/new', function(req, res) {
 })
 
 // shurturl lookup and redirect
+app.post('/api/shorturl/goto', function(req, res) {
+  var shortUrlVar = String(req.body.shorturl)
+  ShortUrl.findOne({short_url: shortUrlVar}, (err, data) => {
+    if (data == null) {
+      return res.json({error: "invalid URL"})
+    } else {
+      res.redirect(data.original_url)
+    }
+  })
+})
+
 app.get("/api/shorturl/:shortVar", function(req, res) {
 
   var shortVar = String(req.params.shortVar)
