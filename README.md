@@ -14,8 +14,8 @@ POST [project_url]/api/shorturl/new - body (urlencoded) :  url=https://www.googl
 
 #### Usage:
 
-[this_project_url]/api/shorturl/3
+[this_project_url]/api/shorturl/(example short URL)
 
 #### Will redirect to:
 
-http://forum.freecodecamp.com
+Original site
